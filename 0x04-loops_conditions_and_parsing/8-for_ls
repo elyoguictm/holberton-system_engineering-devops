@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script displays ls
+for elm in *;
+do
+echo "$elm" | cut -d "-" -f2
+done

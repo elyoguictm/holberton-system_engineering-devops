@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays the time for 12 hours and 59 minutes
+min="1"
+hours="0"
+while [ $min -le 59 ] && [ $hours -le 12 ];
+do
+if [ $min -eq 1 ]
+then
+echo "Hour: $hours"
+fi
+echo "$min"
+if [ $min -eq 59 ]
+then
+min=1
+hours=$((hours+1))
+else
+min=$((min+1))
+fi
+done
