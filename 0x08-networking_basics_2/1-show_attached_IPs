@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that displays all active IPv4 IPs on the machine it’s executed on
+# https://stackoverflow.com/questions/8529181/which-terminal-command-to-get-just-ip-address-and-nothing-else
+
+ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
