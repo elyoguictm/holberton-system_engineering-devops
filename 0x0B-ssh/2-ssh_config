@@ -1,0 +1,6 @@
+# connect using the ubuntu user.
+Host 34.138.201.214
+    HostName 34.138.201.214
+    User ubuntu
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/holberton
