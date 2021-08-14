@@ -6,5 +6,6 @@ file_line {'Pass Auth':
 }
 file_line { 'no pass':
   path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/holberton',
+  match  => 'PasswordAuthentication yes',
+  line   => 'PasswordAuthentication no',
 }
