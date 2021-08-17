@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Redirection
 
-apt-get -y update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-chown -R "$USER":"$USER" /var/www/
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo chown -R "$USER":"$USER" /var/www/
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 sudo sed -i '/server_name _/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
-service nginx restart
+sudo service nginx restart
