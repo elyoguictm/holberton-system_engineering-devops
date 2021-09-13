@@ -14,6 +14,6 @@ if __name__ == '__main__':
     for task in alll:
         if task.get("completed") is True:
             tasks.append(task.get('title'))
-            print("Employee {} is done with tasks({}/{}):".
-                  format(len(name), len(tasks), len(alll)))
-            print("\n".join("\t {}".format(task) for task in tasks))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(len(name), len(tasks), len(alll)))
+    print("\n".join("\t {}".format(task) for task in tasks))
