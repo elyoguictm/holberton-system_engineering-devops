@@ -21,5 +21,6 @@ if __name__ == '__main__':
         tasksd["completed"] = data.get('completed')
         tasksd["username"] = nick
         tasks.append(tasksd)
-    with open(filename, 'w') as f:
-        json.dump(taskend, f)
+
+        with open(filename, 'w') as f:
+            json.dump(taskend, f)
