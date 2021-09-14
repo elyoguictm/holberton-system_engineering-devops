@@ -11,9 +11,12 @@ if __name__ == '__main__':
     al = requests.get(url + "todos?userId={}".format(us)).json()
     tasks = []
     name = u.get('name')
+
     for task in al:
         if task.get("completed") is True:
             tasks.append(task.get('title'))
+
     print("Employee {} is done with tasks({}/{}):"
           .format(len(name), len(tasks), len(al)))
+
     print("\n".join("\t {}".format(task) for task in tasks))
