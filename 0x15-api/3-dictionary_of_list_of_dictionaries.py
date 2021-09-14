@@ -6,16 +6,16 @@ import json
 
 if __name__ == '__main__':
     url = "https://jsonplaceholder.typicode.com/"
-    user = requests.get(url +"users").json()
-    alll = requests.get(url + "todos").json()
+
     tasksd = {}
     taskend = {}
     filename = 'todo_all_employees.json'
-
+    user = requests.get(url + "users").json()
     for data in user:
         nickid = data.get("id")
         tasksd[nickid] = []
         taskend[nickid] = data.get('username')
+    alll = requests.get(url + "todos").json()
     for data2 in alll:
         nickid = data2.get("userId")
         datas = {}
