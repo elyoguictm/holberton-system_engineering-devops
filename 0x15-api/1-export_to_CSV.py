@@ -14,8 +14,8 @@ if __name__ == '__main__':
     with open(filename, 'w', newline='') as csvfile:
         taskw = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
 
-    for task in al:
-        taskw.writerow([int(us),
-                        u.get('username'),
-                        task.get('completed'),
-                        task.get('title')])
+        for task in al:
+            taskw.writerow([int(us),
+                            u.get('username'),
+                            task.get('completed'),
+                            task.get('title')])
