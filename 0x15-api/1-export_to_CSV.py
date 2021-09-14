@@ -6,15 +6,15 @@ import csv
 
 if __name__ == '__main__':
     us = argv[1]
-    url = "https://jsonplaceholder.typicode.com/users/{}"
-    u = requests.get(url + "users/{}".format(argv[1])).json()
-    al = requests.get(url + "todos?userId={}".format(argv[1])).json()
+    url = "https://jsonplaceholder.typicode.com/"
+    u = requests.get(url + "users/{}".format(us)).json()
+    al = requests.get(url + "todos?userId={}".format(us)).json()
     tasks = []
-    filename = argv[1] + ".csv"
+    filename = us + ".csv"
     with open(filename, 'w', newline='') as csvfile:
         taskw = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in al:
-            taskw.writerow([int(argv[1]),
+            taskw.writerow([int(us),
                             u.get('username'),
                             task.get('completed'),
                             task.get('title')])
