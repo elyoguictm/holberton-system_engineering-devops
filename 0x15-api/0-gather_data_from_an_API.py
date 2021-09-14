@@ -9,15 +9,15 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".format
+    u = requests.get("https://jsonplaceholder.typicode.com/users/{}".format
                         (argv[1])).json()
-    alll = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
+    al = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
                         .format(argv[1])).json()
     tasks = []
-    name = user.get('name')
-    for task in alll:
+    name = u.get('name')
+    for task in al:
         if task.get("completed") is True:
             tasks.append(task.get('title'))
     print("Employee {} is done with tasks({}/{}):"
-          .format(len(name), len(tasks), len(alll)))
+          .format(len(name), len(tasks), len(al)))
     print("\n".join("\t {}".format(task) for task in tasks))
