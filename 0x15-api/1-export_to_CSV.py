@@ -5,10 +5,10 @@ from sys import argv
 import csv
 
 if __name__ == '__main__':
-    u = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                     .format(argv[1])).json()
-    al = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                      .format(argv[1])).json()
+    us = argv[1]
+    url = "https://jsonplaceholder.typicode.com/users/{}"
+    u = requests.get(url + "users/{}".format(argv[1])).json()
+    al = requests.get(url + "todos?userId={}".format(argv[1])).json()
     tasks = []
     filename = argv[1] + ".csv"
     with open(filename, 'w', newline='') as csvfile:
