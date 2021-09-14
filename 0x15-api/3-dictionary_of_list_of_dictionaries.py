@@ -15,6 +15,7 @@ if __name__ == '__main__':
         nickid = data.get("id")
         tasksd[nickid] = []
         taskend[nickid] = data.get('username')
+
     alll = requests.get(url + "todos").json()
     for data2 in alll:
         nickid = data2.get("userId")
@@ -23,5 +24,6 @@ if __name__ == '__main__':
         datas["completed"] = data2.get('completed')
         datas["username"] = taskend.get(nickid)
         tasksd.get(nickid).append(datas)
+
     with open(filename, 'w') as f:
         json.dump(tasksd, f)
