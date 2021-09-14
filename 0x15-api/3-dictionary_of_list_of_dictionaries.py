@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Script that returns info about employee ID"""
+
 import requests
 import json
 
