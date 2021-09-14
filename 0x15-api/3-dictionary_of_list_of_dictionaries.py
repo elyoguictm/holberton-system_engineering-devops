@@ -3,10 +3,10 @@
 import requests
 import json
 
-
 if __name__ == '__main__':
-    user = requests.get("https://jsonplaceholder.typicode.com/users").json()
-    alll = requests.get("https://jsonplaceholder.typicode.com/todos").json()
+    url = "https://jsonplaceholder.typicode.com/"
+    user = requests.get(url +"users").json()
+    alll = requests.get(url + "todos").json()
     tasksd = {}
     taskend = {}
     filename = 'todo_all_employees.json'
