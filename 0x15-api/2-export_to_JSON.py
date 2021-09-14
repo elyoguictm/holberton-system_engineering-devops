@@ -6,10 +6,9 @@ import json
 
 if __name__ == '__main__':
     us = argv[1]
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
-                        format(us)).json()
-    alll = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                        .format(us)).json()
+    url = "https://jsonplaceholder.typicode.com/"
+    user = requests.get(url + "users/{}".format(us)).json()
+    alll = requests.get(url + "todos?userId={}".format(us)).json()
     tasks = []
     nick = user.get('username')
     taskend = {}
