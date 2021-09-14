@@ -10,10 +10,9 @@ from sys import argv
 
 if __name__ == '__main__':
     us = argv[1]
-    u = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                     .format(us)).json()
-    al = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                      .format(us)).json()
+    url = "https://jsonplaceholder.typicode.com/"
+    u = requests.get(url + "users/{}".format(us)).json()
+    al = requests.get(url + "todos?userId={}".format(us)).json()
     tasks = []
     name = u.get('name')
     for task in al:
