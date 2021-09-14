@@ -5,18 +5,19 @@ from sys import argv
 import json
 
 if __name__ == '__main__':
+    us = argv[1]
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
-                        format(argv[1])).json()
+                        format(us)).json()
     alll = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                        .format(argv[1])).json()
+                        .format(us)).json()
     tasks = []
     nick = user.get('username')
-    tasksd = {}
     taskend = {}
     taskend[argv[1]] = tasks
     filename = argv[1] + ".json"
 
     for data in alll:
+        tasksd = {}
         tasksd["task"] = data.get('title')
         tasksd["completed"] = data.get('completed')
         tasksd["username"] = nick
