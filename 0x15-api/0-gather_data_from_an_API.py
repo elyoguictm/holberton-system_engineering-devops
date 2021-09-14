@@ -16,6 +16,6 @@ if __name__ == '__main__':
             tasks.append(task.get('title'))
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(len(name), len(tasks), len(al)))
+          .format(u.get('name'), len(tasks), len(al)))
 
     print("\n".join("\t {}".format(task) for task in tasks))
