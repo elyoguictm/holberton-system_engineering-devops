@@ -8,7 +8,7 @@ if __name__ == '__main__':
     user = requests.get("https://jsonplaceholder.typicode.com/users").json()
     alll = requests.get("https://jsonplaceholder.typicode.com/todos").json()
     tasksd = {}
-    taskend= {}
+    taskend = {}
     filename = 'todo_all_employees.json'
 
     for data in user:
