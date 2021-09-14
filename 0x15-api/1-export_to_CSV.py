@@ -6,7 +6,7 @@ import csv
 
 
 if __name__ == '__main__':
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
+    u = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                         format(argv[1])).json()
     al = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
                         format(argv[1])).json()
@@ -17,6 +17,6 @@ if __name__ == '__main__':
         taskw = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in al:
             taskw.writerow([int(argv[1]),
-                            user.get('username'),
+                            u.get('username'),
                             task.get('completed'),
                             task.get('title')])
