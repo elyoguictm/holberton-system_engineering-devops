@@ -18,7 +18,7 @@
 ###### Maria - Well, my files won't open .. I think I did something wrong ..
 ###### Me - Let me see .. hmm try rebooting, maybe it was a simple glitch in the operating system!
 ##### *5 minutes later*
-###### Carla comes to my desk again, but this time she was scared ..
+###### Maria comes to my desk again, but this time she was scared ..
 ###### Maria - Gabriel ..
 #####  * That's my phone ringing * It was the executive director !!
 ###### Richard - What the hell is going on !? My computer has an alert that the files are encrypted and that i must pay a ransom.
