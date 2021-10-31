@@ -1,9 +1,6 @@
 
 # 0x19-Postmortem
 
-#### As a cybersecurity manager, I dare to say that we are not powerful at all, they (cybercriminals) have better technologies and are always one step ahead of us, this is something that i understood that 28/02/18..
-#### Today I will tell you a story of when a ransomware took us by surprise 
-
 <img align="right" alt="jpg" src="https://i.imgflip.com/37m3pe.jpg" width="400" height="300" />
 
 
@@ -98,8 +95,6 @@
 ### What went badly
 ##### Something that I feel guilty of is not educating my trainee correctly about these things, believing it obvious made her fall for an old trick.
 ##### and believe us invincible ..
-
-### That was my story, but like this there are many. We must educate ourselves about this and not fall into traps that can cost us millions. 
 
 <p align="center">
   <img alt="GIF" src="https://i.pinimg.com/originals/0f/ab/3e/0fab3e4f7e9e7d3f199c49f10308ac05.gif" width="800" height="400" />
