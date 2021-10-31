@@ -7,7 +7,7 @@ package { 'nginx':
 file { '/var/www/html/index.html':
     ensure  => present,
     path    => '/var/www/html/index.html',
-    content => 'Holberton School',
+    content => 'Hellow World',
 }
 
 file_line {'Adding_redirect':
